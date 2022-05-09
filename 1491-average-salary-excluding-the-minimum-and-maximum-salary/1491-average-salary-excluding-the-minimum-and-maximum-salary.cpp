@@ -1,9 +1,9 @@
 class Solution {
 public:
     double average(vector<int>& salary) {
-        if(salary.size()==2){
-            return 0;
-        }
+        // if(salary.size()==2){
+        //     return 0;
+        // }
         int mins = INT_MAX;
         int maxs = INT_MIN;
         double sum = 0;
