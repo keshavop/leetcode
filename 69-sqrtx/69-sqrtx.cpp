@@ -1,11 +1,25 @@
 class Solution {
 public:
     int mySqrt(int x) {
-      long long int i=1;
-        while (i*i<=x)
+        int low = 1;
+        int high = x;
+        int ans = 0;
+        while (low <= high)
         {
-            i++;
+            int mid=low+(high-low)/2;
+            if(mid==(x/mid))
+            {
+                return mid;
+            }
+            else if(mid>(x/mid))
+            {
+                high=mid-1;
+            }else
+            {
+                ans=mid;
+                low=mid+1;
+            }
         }
-        return (i-1);  
+        return ans;
     }
 };
