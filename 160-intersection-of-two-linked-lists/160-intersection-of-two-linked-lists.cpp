@@ -13,15 +13,15 @@ public:
             return NULL;
         }
         
-        ListNode *a = headA;
-        ListNode *b = headB;
+        ListNode *a = headA;        //a is pointing head of 1st list
+        ListNode *b = headB;        //b is pointing head of 1st list
         
         while(a!=b){
-            if(a==NULL){
-                a=headB;
+            if(a==NULL){        //if a traverse whole list and reach end
+                a=headB;        // then transfer to 2nd list
             }
             else{
-                a = a->next;
+                a = a->next;    // otherwise traverse
             }
             
             if(b==NULL){
@@ -31,6 +31,6 @@ public:
                 b = b->next;
             }
         }
-        return a;
+        return a;   //return a or b because they pointing on same intersecting point
     }
 };
