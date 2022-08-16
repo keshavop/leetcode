@@ -3,9 +3,10 @@ class Solution
 public:
     int countDigit(int a)
     {
-        int count = 1;
-        while ((a = a / 10) != 0)
+        int count = 0;
+        while (a != 0)
         {
+            a = a / 10;
             count++;
         }
         return count;
