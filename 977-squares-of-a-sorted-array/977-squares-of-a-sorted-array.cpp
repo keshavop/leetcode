@@ -8,11 +8,11 @@ public:
         for(int i=nums.size()-1; i>=0; i--){
             if(abs(nums[h]) > abs(nums[l]) ){
                 ans[i] = nums[h] * nums[h];
-                nums[h--];
+                h--;
             }
             else{
                 ans[i] = nums[l] * nums[l];
-                nums[l++];
+                l++;
             }
         }
     return ans;
